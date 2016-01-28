@@ -1,198 +1,55 @@
-mysql  Ver 14.14 Distrib 5.5.46, for debian-linux-gnu (x86_64) using readline 6.3
-Copyright (c) 2000, 2015, Oracle and/or its affiliates. All rights reserved.
+-- MySQL dump 10.13  Distrib 5.5.46, for debian-linux-gnu (x86_64)
+--
+-- Host: 0.0.0.0    Database: testDB
+-- ------------------------------------------------------
+-- Server version	5.5.46-0ubuntu0.14.04.2
 
-Oracle is a registered trademark of Oracle Corporation and/or its
-affiliates. Other names may be trademarks of their respective
-owners.
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
-Usage: mysql [OPTIONS] [database]
-  -?, --help          Display this help and exit.
-  -I, --help          Synonym for -?
-  --auto-rehash       Enable automatic rehashing. One doesn't need to use
-                      'rehash' to get table and field completion, but startup
-                      and reconnecting may take a longer time. Disable with
-                      --disable-auto-rehash.
-                      (Defaults to on; use --skip-auto-rehash to disable.)
-  -A, --no-auto-rehash 
-                      No automatic rehashing. One has to use 'rehash' to get
-                      table and field completion. This gives a quicker start of
-                      mysql and disables rehashing on reconnect.
-  --auto-vertical-output 
-                      Automatically switch to vertical output mode if the
-                      result is wider than the terminal width.
-  -B, --batch         Don't use history file. Disable interactive behavior.
-                      (Enables --silent.)
-  --character-sets-dir=name 
-                      Directory for character set files.
-  --column-type-info  Display column type information.
-  -c, --comments      Preserve comments. Send comments to the server. The
-                      default is --skip-comments (discard comments), enable
-                      with --comments.
-  -C, --compress      Use compression in server/client protocol.
-  -#, --debug[=#]     This is a non-debug version. Catch this and exit.
-  --debug-check       Check memory and open file usage at exit.
-  -T, --debug-info    Print some debug info at exit.
-  -D, --database=name Database to use.
-  --default-character-set=name 
-                      Set the default character set.
-  --delimiter=name    Delimiter to be used.
-  --enable-cleartext-plugin 
-                      Enable/disable the clear text authentication plugin.
-  -e, --execute=name  Execute command and quit. (Disables --force and history
-                      file.)
-  -E, --vertical      Print the output of a query (rows) vertically.
-  -f, --force         Continue even if we get an SQL error.
-  -G, --named-commands 
-                      Enable named commands. Named commands mean this program's
-                      internal commands; see mysql> help . When enabled, the
-                      named commands can be used from any line of the query,
-                      otherwise only from the first line, before an enter.
-                      Disable with --disable-named-commands. This option is
-                      disabled by default.
-  -i, --ignore-spaces Ignore space after function names.
-  --init-command=name SQL Command to execute when connecting to MySQL server.
-                      Will automatically be re-executed when reconnecting.
-  --local-infile      Enable/disable LOAD DATA LOCAL INFILE.
-  -b, --no-beep       Turn off beep on error.
-  -h, --host=name     Connect to host.
-  -H, --html          Produce HTML output.
-  -X, --xml           Produce XML output.
-  --line-numbers      Write line numbers for errors.
-                      (Defaults to on; use --skip-line-numbers to disable.)
-  -L, --skip-line-numbers 
-                      Don't write line number for errors.
-  -n, --unbuffered    Flush buffer after each query.
-  --column-names      Write column names in results.
-                      (Defaults to on; use --skip-column-names to disable.)
-  -N, --skip-column-names 
-                      Don't write column names in results.
-  --sigint-ignore     Ignore SIGINT (CTRL-C).
-  -o, --one-database  Ignore statements except those that occur while the
-                      default database is the one named at the command line.
-  --pager[=name]      Pager to use to display results. If you don't supply an
-                      option, the default pager is taken from your ENV variable
-                      PAGER. Valid pagers are less, more, cat [> filename],
-                      etc. See interactive help (\h) also. This option does not
-                      work in batch mode. Disable with --disable-pager. This
-                      option is disabled by default.
-  -p, --password[=name] 
-                      Password to use when connecting to server. If password is
-                      not given it's asked from the tty.
-  -P, --port=#        Port number to use for connection or 0 for default to, in
-                      order of preference, my.cnf, $MYSQL_TCP_PORT,
-                      /etc/services, built-in default (3306).
-  --prompt=name       Set the mysql prompt to this value.
-  --protocol=name     The protocol to use for connection (tcp, socket, pipe,
-                      memory).
-  -q, --quick         Don't cache result, print it row by row. This may slow
-                      down the server if the output is suspended. Doesn't use
-                      history file.
-  -r, --raw           Write fields without conversion. Used with --batch.
-  --reconnect         Reconnect if the connection is lost. Disable with
-                      --disable-reconnect. This option is enabled by default.
-                      (Defaults to on; use --skip-reconnect to disable.)
-  -s, --silent        Be more silent. Print results with a tab as separator,
-                      each row on new line.
-  -S, --socket=name   The socket file to use for connection.
-  --ssl               Enable SSL for connection (automatically enabled with
-                      other flags).
-  --ssl-ca=name       CA file in PEM format (check OpenSSL docs, implies
-                      --ssl).
-  --ssl-capath=name   CA directory (check OpenSSL docs, implies --ssl).
-  --ssl-cert=name     X509 cert in PEM format (implies --ssl).
-  --ssl-cipher=name   SSL cipher to use (implies --ssl).
-  --ssl-key=name      X509 key in PEM format (implies --ssl).
-  --ssl-verify-server-cert 
-                      Verify server's "Common Name" in its cert against
-                      hostname used when connecting. This option is disabled by
-                      default.
-  -t, --table         Output in table format.
-  --tee=name          Append everything into outfile. See interactive help (\h)
-                      also. Does not work in batch mode. Disable with
-                      --disable-tee. This option is disabled by default.
-  -u, --user=name     User for login if not current user.
-  -U, --safe-updates  Only allow UPDATE and DELETE that uses keys.
-  -U, --i-am-a-dummy  Synonym for option --safe-updates, -U.
-  -v, --verbose       Write more. (-v -v -v gives the table output format).
-  -V, --version       Output version information and exit.
-  -w, --wait          Wait and retry if connection is down.
-  --connect-timeout=# Number of seconds before connection timeout.
-  --max-allowed-packet=# 
-                      The maximum packet length to send to or receive from
-                      server.
-  --net-buffer-length=# 
-                      The buffer size for TCP/IP and socket communication.
-  --select-limit=#    Automatic limit for SELECT when using --safe-updates.
-  --max-join-size=#   Automatic limit for rows in a join when using
-                      --safe-updates.
-  --secure-auth       Refuse client connecting to server if it uses old
-                      (pre-4.1.1) protocol.
-  --server-arg=name   Send embedded server this as a parameter.
-  --show-warnings     Show warnings after every statement.
-  --plugin-dir=name   Directory for client-side plugins.
-  --default-auth=name Default authentication client-side plugin to use.
+--
+-- Table structure for table `msc_skills_traders`
+--
 
-Default options are read from the following files in the given order:
-/etc/my.cnf /etc/mysql/my.cnf /usr/etc/my.cnf ~/.my.cnf 
-The following groups are read: mysql client
-The following options may be given as the first argument:
---print-defaults        Print the program argument list and exit.
---no-defaults           Don't read default options from any option file.
---defaults-file=#       Only read default options from the given file #.
---defaults-extra-file=# Read this file after the global files are read.
+DROP TABLE IF EXISTS `msc_skills_traders`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `msc_skills_traders` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `industry` varchar(45) DEFAULT NULL,
+  `category` varchar(45) DEFAULT NULL,
+  `code` varchar(10) DEFAULT NULL,
+  `description` varchar(45) DEFAULT NULL,
+  `product_type` tinyint(4) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=213 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
-Variables (--variable-name=value)
-and boolean options {FALSE|TRUE}  Value (after reading options)
---------------------------------- ----------------------------------------
-auto-rehash                       TRUE
-auto-vertical-output              FALSE
-character-sets-dir                (No default value)
-column-type-info                  FALSE
-comments                          FALSE
-compress                          FALSE
-debug-check                       FALSE
-debug-info                        FALSE
-database                          (No default value)
-default-character-set             auto
-delimiter                         ;
-enable-cleartext-plugin           FALSE
-vertical                          FALSE
-force                             FALSE
-named-commands                    FALSE
-ignore-spaces                     FALSE
-init-command                      (No default value)
-local-infile                      FALSE
-no-beep                           FALSE
-host                              localhost
-html                              FALSE
-xml                               FALSE
-line-numbers                      TRUE
-unbuffered                        FALSE
-column-names                      TRUE
-sigint-ignore                     FALSE
-port                              3306
-prompt                            mysql> 
-quick                             FALSE
-raw                               FALSE
-reconnect                         FALSE
-socket                            /var/run/mysqld/mysqld.sock
-ssl                               FALSE
-ssl-ca                            (No default value)
-ssl-capath                        (No default value)
-ssl-cert                          (No default value)
-ssl-cipher                        (No default value)
-ssl-key                           (No default value)
-ssl-verify-server-cert            FALSE
-table                             FALSE
-user                              dinethh
-safe-updates                      FALSE
-i-am-a-dummy                      FALSE
-connect-timeout                   0
-max-allowed-packet                16777216
-net-buffer-length                 16384
-select-limit                      1000
-max-join-size                     1000000
-secure-auth                       FALSE
-show-warnings                     FALSE
-plugin-dir                        (No default value)
-default-auth                      (No default value)
+--
+-- Dumping data for table `msc_skills_traders`
+--
+
+LOCK TABLES `msc_skills_traders` WRITE;
+/*!40000 ALTER TABLE `msc_skills_traders` DISABLE KEYS */;
+INSERT INTO `msc_skills_traders` VALUES (1,'Building & Construction','General Requiremts','01100','Summary',1),(2,'Building & Construction','General Requiremts','01200','Price & Payment Procedures',1),(3,'Building & Construction','General Requiremts','01300','Administrative Requiremts',1),(4,'Building & Construction','General Requiremts','01400','Quality Requiremts.',1),(5,'Building & Construction','General Requiremts','01500','Temporary Facilities & Controls',1),(6,'Building & Construction','General Requiremts','01600','Product Requiremts',1),(7,'Building & Construction','General Requiremts','01700','Execution Requiremts',1),(8,'Building & Construction','General Requiremts','01800','Facility Operation',1),(9,'Building & Construction','General Requiremts','01900','Facility Decommissioning',1),(10,'Building & Construction','Site Construction','02050','Basic Site Materials & Methods',1),(11,'Building & Construction','Site Construction','02100','Site Remediation',1),(12,'Building & Construction','Site Construction','02200','Site Preparation',1),(13,'Building & Construction','Site Construction','02300','Earthwork',1),(14,'Building & Construction','Site Construction','02400','Tunneling, Boring, & Jacking',1),(15,'Building & Construction','Site Construction','02450','Foundation & Load-bearing Elements',1),(16,'Building & Construction','Site Construction','02500','Utility Services',1),(17,'Building & Construction','Site Construction','02600','Drainage & Containment',1),(18,'Building & Construction','Site Construction','02700','Bases, Ballasts, Pavemts, & Appurtenances',1),(19,'Building & Construction','Site Construction','02800','Site Improvements & Amenities',1),(20,'Building & Construction','Site Construction','02900','Planting',1),(21,'Building & Construction','Site Construction','02950','Site Restoration & Rehabilitation',1),(22,'Building & Construction','Concrete','03050','Basic Materials & Methods',1),(23,'Building & Construction','Concrete','03100','Concrete Forms & Accessories',1),(24,'Building & Construction','Concrete','03200','Concrete Reinforcement',1),(25,'Building & Construction','Concrete','03300','Cast- in-Place Concrete',1),(26,'Building & Construction','Concrete','03400','Precast Concrete',1),(27,'Building & Construction','Concrete','03500','Cementitious Decks & Underlayment',1),(28,'Building & Construction','Concrete','03600','Grouts',1),(29,'Building & Construction','Concrete','03700','Mass Concrete',1),(30,'Building & Construction','Concrete','03900','Concrete Restoration & Cleaning',1),(31,'Building & Construction','Masonry','04050','Basic Materials & Methods',1),(32,'Building & Construction','Masonry','04200','Masonry Units',1),(33,'Building & Construction','Masonry','04400','Stone',1),(34,'Building & Construction','Masonry','04500','Refractories',1),(35,'Building & Construction','Masonry','04600','Corrosion-Resistant Masonry',1),(36,'Building & Construction','Masonry','04700','Simulated Masonry',1),(37,'Building & Construction','Masonry','04800','Masonry Assemblies',1),(38,'Building & Construction','Masonry','04900','Masonry Restoration & Cleaning',1),(39,'Building & Construction','Metals','05050','Basic Metal Materials & Methods',1),(40,'Building & Construction','Metals','05100','Structural Metal Framing',1),(41,'Building & Construction','Metals','05200','Metal Joists',1),(42,'Building & Construction','Metals','05300','Metal Deck',1),(43,'Building & Construction','Metals','05400','Cold-Formed Metal Framing',1),(44,'Building & Construction','Metals','05500','Metal Fabrications',1),(45,'Building & Construction','Metals','05600','Hydraulic Fabrications',1),(46,'Building & Construction','Metals','05650','Railroad Track & Accessories',1),(47,'Building & Construction','Metals','05700','Ornamental Metal',1),(48,'Building & Construction','Metals','05800','Expansion Control',1),(49,'Building & Construction','Metals','05900','Metal Restoration & Cleaning',1),(50,'Building & Construction','Wood & Plastics','06050','Basic Materials & Methods',1),(51,'Building & Construction','Wood & Plastics','06100','Rough Carpentry',1),(52,'Building & Construction','Wood & Plastics','06200','Finish Carpentry',1),(53,'Building & Construction','Wood & Plastics','06400','Architectural Woodwork',1),(54,'Building & Construction','Wood & Plastics','06500','Structural Plastics',1),(55,'Building & Construction','Wood & Plastics','06600','Plastic Fabrications',1),(56,'Building & Construction','Wood & Plastics','06900','Wood & Plastic Restoration & Cleaning',1),(57,'Building & Construction','Thermal & Moisture Protection','07050','Basic Thermal & Moisture Protection Materials',1),(58,'Building & Construction','Thermal & Moisture Protection','07100','Dampproofing & Waterproofing',1),(59,'Building & Construction','Thermal & Moisture Protection','07200','Thermal Protection',1),(60,'Building & Construction','Thermal & Moisture Protection','07300','Shingles, Roof Tiles, & Roof Coverings',1),(61,'Building & Construction','Thermal & Moisture Protection','07400','Roofing & Siding Panels',1),(62,'Building & Construction','Thermal & Moisture Protection','07500','Membrane Roofing',1),(63,'Building & Construction','Thermal & Moisture Protection','07600','Flashing & Sheet Metal',1),(64,'Building & Construction','Thermal & Moisture Protection','07700','Roof Specialties & Accessories',1),(65,'Building & Construction','Thermal & Moisture Protection','07800','Fire & Smoke Protection',1),(66,'Building & Construction','Thermal & Moisture Protection','07900','Joint Sealers',1),(67,'Building & Construction','Doors & Windows','08050','Basic Door & Window Materials & Methods',1),(68,'Building & Construction','Doors & Windows','08100','Metal Doors & Frames',1),(69,'Building & Construction','Doors & Windows','08200','Wood & Plastic Doors',1),(70,'Building & Construction','Doors & Windows','08300','Specialty Doors',1),(71,'Building & Construction','Doors & Windows','08400','Entrances & Storefronts',1),(72,'Building & Construction','Doors & Windows','08500','Windows',1),(73,'Building & Construction','Doors & Windows','08600','Skylights',1),(74,'Building & Construction','Doors & Windows','08700','Hardware',1),(75,'Building & Construction','Doors & Windows','08800','Glazing',1),(76,'Building & Construction','Doors & Windows','08900','Glazed Curtain Wall',1),(77,'Building & Construction','Finishes','09050','Basic Finish Materials & Methods',1),(78,'Building & Construction','Finishes','09100','Metal Support Assemblies',1),(79,'Building & Construction','Finishes','09200','Plaster Gypsum Board',1),(80,'Building & Construction','Finishes','09300','Tile',1),(81,'Building & Construction','Finishes','09400','Terrazzo',1),(82,'Building & Construction','Finishes','09500','Ceilings',1),(83,'Building & Construction','Finishes','09600','Flooring',1),(84,'Building & Construction','Finishes','09700','Wall Finishes',1),(85,'Building & Construction','Finishes','09800','Acoustical Treatment',1),(86,'Building & Construction','Finishes','09900','Paints & Coatings',1),(87,'Building & Construction','Specialties','10100','Visual Display Boards',1),(88,'Building & Construction','Specialties','10150','Compartments & Cubicles',1),(89,'Building & Construction','Specialties','10200','Louvers & Vents',1),(90,'Building & Construction','Specialties','10240','Grilles & Screens',1),(91,'Building & Construction','Specialties','10250','Service Walls',1),(92,'Building & Construction','Specialties','10260','Wall & Corner Guards',1),(93,'Building & Construction','Specialties','10270','Access Flooring',1),(94,'Building & Construction','Specialties','10290','Pest Control',1),(95,'Building & Construction','Specialties','10300','Fireplaces & Stoves',1),(96,'Building & Construction','Specialties','10340','Manufactured Exterior Specialties',1),(97,'Building & Construction','Specialties','10350','Flagpoles',1),(98,'Building & Construction','Specialties','10400','Identification Devices',1),(99,'Building & Construction','Specialties','10450','Pedestrian Control Devices',1),(100,'Building & Construction','Specialties','10500','Lockers',1),(101,'Building & Construction','Specialties','10520','Fire Protection Specialties',1),(102,'Building & Construction','Specialties','10530','Protective Covers',1),(103,'Building & Construction','Specialties','10550','Postal Specialties',1),(104,'Building & Construction','Specialties','10600','Partitions',1),(105,'Building & Construction','Specialties','10670','Storage Shelving',1),(106,'Building & Construction','Specialties','10700','Exterior Protection',1),(107,'Building & Construction','Specialties','10750','Telephone Specialties',1),(108,'Building & Construction','Specialties','10800','Toilet, Bath, & Laundry Accessories',1),(109,'Building & Construction','Specialties','10880','Scales',1),(110,'Building & Construction','Specialties','10900','Wardrobe & Closet Specialties',1),(111,'Building & Construction','Equipment','11010','Maintenance Equipmt',1),(112,'Building & Construction','Equipment','11020','Security & Vault Equipmt',1),(113,'Building & Construction','Equipment','11030','Teller & Service Equipmt',1),(114,'Building & Construction','Equipment','11040','Ecclesiastical Equipmt',1),(115,'Building & Construction','Equipment','11050','Library Equipmt',1),(116,'Building & Construction','Equipment','11060','Theater & Stage Equipmt',1),(117,'Building & Construction','Equipment','11070','Instrumental Equipmt',1),(118,'Building & Construction','Equipment','11080','Registration Equipmt',1),(119,'Building & Construction','Equipment','11090','Checkroom Equipmt',1),(120,'Building & Construction','Equipment','11100','Mercantile Equipmt',1),(121,'Building & Construction','Equipment','11110','Commercial Laundry & Dry Cleaning Equipmt',1),(122,'Building & Construction','Equipment','11120','Vending Equipmt',1),(123,'Building & Construction','Equipment','11130','Audio-Visual Equipmt',1),(124,'Building & Construction','Equipment','11140','Vehicle Service Equipmt',1),(125,'Building & Construction','Equipment','11150','Parking Control Equipmt',1),(126,'Building & Construction','Equipment','11160','Loading Dock Equipmt',1),(127,'Building & Construction','Equipment','11170','Solid Waste Handling Equipmt',1),(128,'Building & Construction','Equipment','11190','Detention Equipmt',1),(129,'Building & Construction','Equipment','11200','Water Supply & Treatment Equipmt',1),(130,'Building & Construction','Equipment','11280','Hydraulic Gates & Valves',1),(131,'Building & Construction','Equipment','11300','Fluid Waste Treatment & Disposal Equipmt',1),(132,'Building & Construction','Equipment','11400','Food Service Equipmt',1),(133,'Building & Construction','Equipment','11450','Residential Equipmt',1),(134,'Building & Construction','Equipment','11460','Unit Kitchens',1),(135,'Building & Construction','Equipment','11470','Darkroom Equipmt',1),(136,'Building & Construction','Equipment','11480','Athletic, Recreational, & Therapeutic Equipmt',1),(137,'Building & Construction','Equipment','11500','Industrial & Process Equipmt',1),(138,'Building & Construction','Equipment','11600','Laboratory Equipmt',1),(139,'Building & Construction','Equipment','11650','Planetarium Equipmt',1),(140,'Building & Construction','Equipment','11660','Observatory Equipmt',1),(141,'Building & Construction','Equipment','11680','Office Equipmt',1),(142,'Building & Construction','Equipment','11700','Medical Equipmt',1),(143,'Building & Construction','Equipment','11780','Mortuary Equipmt',1),(144,'Building & Construction','Equipment','11850','Navigation Equipmt',1),(145,'Building & Construction','Equipment','11870','Agricultural Equipmt',1),(146,'Building & Construction','Equipment','11900','Exhibit Equipmt',1),(147,'Building & Construction','Furnishings','12050','Fabrics',1),(148,'Building & Construction','Furnishings','12100','Art',1),(149,'Building & Construction','Furnishings','12300','Manufactured Casework',1),(150,'Building & Construction','Furnishings','12400','Furnishings & Accessories',1),(151,'Building & Construction','Furnishings','12500','Furniture',1),(152,'Building & Construction','Furnishings','12600','Multiple Seating',1),(153,'Building & Construction','Furnishings','12700','Systems Furniture',1),(154,'Building & Construction','Furnishings','12800','Interior Plants & Planters',1),(155,'Building & Construction','Furnishings','12900','Furnishings Repair & Restoration',1),(156,'Building & Construction','Special Construction','13010','Air-Supported Structures',1),(157,'Building & Construction','Special Construction','13020','Building Modules',1),(158,'Building & Construction','Special Construction','13030','Special Purpose Rooms',1),(159,'Building & Construction','Special Construction','13080','Sound, Vibration, & Seismic Control',1),(160,'Building & Construction','Special Construction','13090','Radiation Protection',1),(161,'Building & Construction','Special Construction','13100','Lightning Protection',1),(162,'Building & Construction','Special Construction','13110','Cathodic Protection',1),(163,'Building & Construction','Special Construction','13120','Pre-Engineered Structures',1),(164,'Building & Construction','Special Construction','13150','Swimming Pools',1),(165,'Building & Construction','Special Construction','13160','Aquariums',1),(166,'Building & Construction','Special Construction','13165','Aquatic Park Facilities',1),(167,'Building & Construction','Special Construction','13170','Tubs & Pools',1),(168,'Building & Construction','Special Construction','13175','Ice Rinks',1),(169,'Building & Construction','Special Construction','13185','Kennels & Animal Shelters',1),(170,'Building & Construction','Special Construction','13190','Site-Constructed Incinerators',1),(171,'Building & Construction','Special Construction','13200','Storage Tanks',1),(172,'Building & Construction','Special Construction','13220','Filter Underdrains & Media',1),(173,'Building & Construction','Special Construction','13230','Digester Covers & Appurtenances',1),(174,'Building & Construction','Special Construction','13240','Oxygenation Systems',1),(175,'Building & Construction','Special Construction','13260','Sludge Conditioning Systems',1),(176,'Building & Construction','Special Construction','13280','Hazardous Material Remediation',1),(177,'Building & Construction','Special Construction','13400','Measurement & Control Instrumentation',1),(178,'Building & Construction','Special Construction','13500','Recording Instrumentation',1),(179,'Building & Construction','Special Construction','13550','Transportation Control Instrumentation',1),(180,'Building & Construction','Special Construction','13600','Solar & Wind Energy Equipmt',1),(181,'Building & Construction','Special Construction','13700','Security Access & Surveillance',1),(182,'Building & Construction','Special Construction','13800','Building Automation & Control',1),(183,'Building & Construction','Special Construction','13850','Detection & Alarm',1),(184,'Building & Construction','Special Construction','13900','Fire Suppression',1),(185,'Building & Construction','Conveying Systems','14100','Dumbwaiters',1),(186,'Building & Construction','Conveying Systems','14200','Elevators',1),(187,'Building & Construction','Conveying Systems','14300','Escalators & Moving Walks',1),(188,'Building & Construction','Conveying Systems','14400','Lifts',1),(189,'Building & Construction','Conveying Systems','14500','Material Handling',1),(190,'Building & Construction','Conveying Systems','14600','Hoists & Cranes',1),(191,'Building & Construction','Conveying Systems','14700','Turntables',1),(192,'Building & Construction','Conveying Systems','14800','Scaffolding',1),(193,'Building & Construction','Conveying Systems','14900','Transportation',1),(194,'Building & Construction','Mechanical','15050','Basic Mechanical Materials & Methods',1),(195,'Building & Construction','Mechanical','15100','Building Services Piping',1),(196,'Building & Construction','Mechanical','15200','Process Piping',1),(197,'Building & Construction','Mechanical','15300','Fire Protection Piping',1),(198,'Building & Construction','Mechanical','15400','Plumbing Fixtures & Equipmt',1),(199,'Building & Construction','Mechanical','15500','Heat- Generation Equipmt',1),(200,'Building & Construction','Mechanical','15600','Refrigeration Equipmt',1),(201,'Building & Construction','Mechanical','15700','Heating, Ventilating, & Air Conditioning Equi',1),(202,'Building & Construction','Mechanical','15800','Air Distribution',1),(203,'Building & Construction','Mechanical','15900','HVAC Instrumentation & Controls',1),(204,'Building & Construction','Mechanical','15950','Testing, Adjusting, & Balancing',1),(205,'Building & Construction','Electrical','16050','Basic Electrical Materials & Methods',1),(206,'Building & Construction','Electrical','16100','Wiring Methods',1),(207,'Building & Construction','Electrical','16200','Electrical Power',1),(208,'Building & Construction','Electrical','16300','Transmission & Distribution',1),(209,'Building & Construction','Electrical','16400','Low-Voltage Distribution',1),(210,'Building & Construction','Electrical','16500','Lighting',1),(211,'Building & Construction','Electrical','16700','Communications',1),(212,'Building & Construction','Electrical','16800','Sound & Video',1);
+/*!40000 ALTER TABLE `msc_skills_traders` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2016-01-28 22:08:03
