@@ -12,7 +12,7 @@ $file = fopen("CSI_codes (building divisions).txt","r");
 $line = fgets($file);
 
 $product_category = "";
-$counter = 0;
+$counter = 1;
 
 while(!feof($file)) {
     $line = fgets($file);
@@ -37,13 +37,12 @@ while(!feof($file)) {
             $stmt->bindParam(':description', $description);
             $stmt->bindParam(':product_type', $product_type);
             
-            $stmt->execute();
-            
             if ($stmt->execute() == true) {
                 print "Line # $counter inserted<br>";
             }
+            $counter++;
         }
-        $counter++;
+        
     }
 }
 
