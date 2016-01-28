@@ -6,7 +6,7 @@ CSI Codes- Construction Products & Activities
 00800 Supplementary Conditions
 00900 Modifications
 
-01000 Division 1 — General Requiremts
+01000 Division 1 - General Requiremts
 01100 Summary
 01200 Price & Payment Procedures
 01300 Administrative Requiremts
@@ -17,7 +17,7 @@ CSI Codes- Construction Products & Activities
 01800 Facility Operation
 01900 Facility Decommissioning
 
-02000 Division 2 — Site Construction
+02000 Division 2 - Site Construction
 02050 Basic Site Materials & Methods
 02100 Site Remediation
 02200 Site Preparation
@@ -31,7 +31,7 @@ CSI Codes- Construction Products & Activities
 02900 Planting
 02950 Site Restoration & Rehabilitation
 
-03000 Division 3 — Concrete
+03000 Division 3 - Concrete
 03050 Basic Materials & Methods
 03100 Concrete Forms & Accessories
 03200 Concrete Reinforcement
@@ -42,7 +42,7 @@ CSI Codes- Construction Products & Activities
 03700 Mass Concrete
 03900 Concrete Restoration & Cleaning
 
-04000 Division 4 — Masonry
+04000 Division 4 - Masonry
 04050 Basic Materials & Methods
 04200 Masonry Units
 04400 Stone
@@ -52,7 +52,7 @@ CSI Codes- Construction Products & Activities
 04800 Masonry Assemblies
 04900 Masonry Restoration & Cleaning
 
-05000 Division 5 — Metals
+05000 Division 5 - Metals
 05050 Basic Metal Materials & Methods
 05100 Structural Metal Framing
 05200 Metal Joists
@@ -65,7 +65,7 @@ CSI Codes- Construction Products & Activities
 05800 Expansion Control
 05900 Metal Restoration & Cleaning
 
-06000 Division 6 — Wood & Plastics
+06000 Division 6 - Wood & Plastics
 06050 Basic Materials & Methods
 06100 Rough Carpentry
 06200 Finish Carpentry
@@ -74,7 +74,8 @@ CSI Codes- Construction Products & Activities
 06600 Plastic Fabrications
 06900 Wood & Plastic Restoration & Cleaning
 
-07000 Division 7 — Thermal & Moisture Protection07050 Basic Thermal & Moisture Protection Materials & Methods
+07000 Division 7 - Thermal & Moisture Protection
+07050 Basic Thermal & Moisture Protection Materials & Methods
 07100 Dampproofing & Waterproofing
 07200 Thermal Protection
 07300 Shingles, Roof Tiles, & Roof Coverings
@@ -85,7 +86,7 @@ CSI Codes- Construction Products & Activities
 07800 Fire & Smoke Protection
 07900 Joint Sealers
 
-08000 Division 8 — Doors & Windows
+08000 Division 8 - Doors & Windows
 08050 Basic Door & Window Materials & Methods
 08100 Metal Doors & Frames
 08200 Wood & Plastic Doors
@@ -97,7 +98,7 @@ CSI Codes- Construction Products & Activities
 08800 Glazing
 08900 Glazed Curtain Wall
 
-09000 Division 9 — Finishes
+09000 Division 9 - Finishes
 09050 Basic Finish Materials & Methods
 09100 Metal Support Assemblies
 09200 Plaster Gypsum Board
@@ -109,7 +110,7 @@ CSI Codes- Construction Products & Activities
 09800 Acoustical Treatment
 09900 Paints & Coatings
 
-10000 Division 10 — Specialties
+10000 Division 10 - Specialties
 10100 Visual Display Boards
 10150 Compartments & Cubicles
 10200 Louvers & Vents
@@ -135,7 +136,7 @@ CSI Codes- Construction Products & Activities
 10880 Scales
 10900 Wardrobe & Closet Specialties
 
-11000 Division 11 — Equipment
+11000 Division 11 - Equipment
 11010 Maintenance Equipmt
 11020 Security & Vault Equipmt
 11030 Teller & Service Equipmt
@@ -173,7 +174,7 @@ CSI Codes- Construction Products & Activities
 11870 Agricultural Equipmt
 11900 Exhibit Equipmt
 
-12000 Division 12 — Furnishings
+12000 Division 12 - Furnishings
 12050 Fabrics
 12100 Art
 12300 Manufactured Casework
@@ -184,7 +185,7 @@ CSI Codes- Construction Products & Activities
 12800 Interior Plants & Planters
 12900 Furnishings Repair & Restoration
 
-13000 Division 13 — Special Construction
+13000 Division 13 - Special Construction
 13010 Air-Supported Structures
 13020 Building Modules
 13030 Special Purpose Rooms
@@ -215,7 +216,7 @@ CSI Codes- Construction Products & Activities
 13850 Detection & Alarm
 13900 Fire Suppression
 
-14000 Division 14 — Conveying Systems
+14000 Division 14 - Conveying Systems
 14100 Dumbwaiters
 14200 Elevators
 14300 Escalators & Moving Walks
@@ -226,7 +227,7 @@ CSI Codes- Construction Products & Activities
 14800 Scaffolding
 14900 Transportation
 
-15000 Division 15 — Mechanical
+15000 Division 15 - Mechanical
 15050 Basic Mechanical Materials & Methods
 15100 Building Services Piping
 15200 Process Piping
@@ -239,7 +240,7 @@ CSI Codes- Construction Products & Activities
 15900 HVAC Instrumentation & Controls
 15950 Testing, Adjusting, & Balancing
 
-16000 Division 16 — Electrical
+16000 Division 16 - Electrical
 16050 Basic Electrical Materials & Methods
 16100 Wiring Methods
 16200 Electrical Power
