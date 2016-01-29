@@ -12,7 +12,7 @@ $file = fopen("CSI_codes (building divisions).txt","r");
 $line = fgets($file);
 
 $product_category = "";
-$counter = 1;
+$counter = 0;
 
 while(!feof($file)) {
     $line = fgets($file);
@@ -38,7 +38,7 @@ while(!feof($file)) {
             $stmt->bindParam(':product_type', $product_type);
             
             if ($stmt->execute() == true) {
-                print "Line # $counter inserted<br>";
+                //print "$counter ";
             }
             $counter++;
         }
@@ -46,5 +46,85 @@ while(!feof($file)) {
     }
 }
 
+print "Total $counter records processed<br>";
 
 fclose($file);
+
+
+
+/// select from DB and output to a CSV
+
+$stmt = $db->query('SELECT * FROM msc_skills_traders');
+
+print "Fetched data from the DB<br>";
+
+?>
+
+<style type="text/css">
+    .wrapper {
+        width: 100%;
+    }
+    .float {
+        float: left;
+    }
+    .tab1 { width: 50px; }
+    .tab2 { width: 200px; }
+    .tab3 { width: 200px; }
+    .tab4 { width: 100px; }
+    .tab5 { width: 500px; }
+    .tab6 { width: 100px; }
+    .head {
+        font-weight: bold;
+    }
+    .head > div {
+        font-weight: bold;
+    }
+
+</style>
+
+<div class="wrapper">
+    <div class="inner-wrapper head">
+        <div class="float tab1">ID</div>
+        <div class="float tab2">Industry</div>
+        <div class="float tab3">Category</div>
+        <div class="float tab4">Code</div>
+        <div class="float tab5">Description</div>
+        <div class="float tab6">Product Type</div>
+        <div style="clear: both;"></div>
+    </div>
+    
+
+
+<?php
+
+
+
+while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+    $id = $row['id'];
+    $industry = $row['industry']; 
+    $category = $row['category'];
+    $code = $row['code'];
+    $description = $row['description'];
+    $product_type = $row['product_type'];
+    
+?>
+
+    <div class="inner-wrapper children">
+        <div class="float tab1"><?php echo $id; ?></div>
+        <div class="float tab2"><?php echo $industry; ?></div>
+        <div class="float tab3"><?php echo $category; ?></div>
+        <div class="float tab4"><?php echo $code; ?></div>
+        <div class="float tab5"><?php echo $description; ?></div>
+        <div class="float tab6"><?php echo $product_type; ?></div>
+        <div style="clear: both;"></div>
+    </div>
+
+
+<?php
+    
+    
+}
+
+?>
+
+</div>
