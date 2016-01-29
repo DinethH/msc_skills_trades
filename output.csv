@@ -1,0 +1,212 @@
+1,"Building & Construction","General Requiremts",01100,Summary,1
+2,"Building & Construction","General Requiremts",01200,"Price & Payment Procedures",1
+3,"Building & Construction","General Requiremts",01300,"Administrative Requiremts",1
+4,"Building & Construction","General Requiremts",01400,"Quality Requiremts.",1
+5,"Building & Construction","General Requiremts",01500,"Temporary Facilities & Controls",1
+6,"Building & Construction","General Requiremts",01600,"Product Requiremts",1
+7,"Building & Construction","General Requiremts",01700,"Execution Requiremts",1
+8,"Building & Construction","General Requiremts",01800,"Facility Operation",1
+9,"Building & Construction","General Requiremts",01900,"Facility Decommissioning",1
+10,"Building & Construction","Site Construction",02050,"Basic Site Materials & Methods",1
+11,"Building & Construction","Site Construction",02100,"Site Remediation",1
+12,"Building & Construction","Site Construction",02200,"Site Preparation",1
+13,"Building & Construction","Site Construction",02300,Earthwork,1
+14,"Building & Construction","Site Construction",02400,"Tunneling, Boring, & Jacking",1
+15,"Building & Construction","Site Construction",02450,"Foundation & Load-bearing Elements",1
+16,"Building & Construction","Site Construction",02500,"Utility Services",1
+17,"Building & Construction","Site Construction",02600,"Drainage & Containment",1
+18,"Building & Construction","Site Construction",02700,"Bases, Ballasts, Pavemts, & Appurtenances",1
+19,"Building & Construction","Site Construction",02800,"Site Improvements & Amenities",1
+20,"Building & Construction","Site Construction",02900,Planting,1
+21,"Building & Construction","Site Construction",02950,"Site Restoration & Rehabilitation",1
+22,"Building & Construction",Concrete,03050,"Basic Materials & Methods",1
+23,"Building & Construction",Concrete,03100,"Concrete Forms & Accessories",1
+24,"Building & Construction",Concrete,03200,"Concrete Reinforcement",1
+25,"Building & Construction",Concrete,03300,"Cast- in-Place Concrete",1
+26,"Building & Construction",Concrete,03400,"Precast Concrete",1
+27,"Building & Construction",Concrete,03500,"Cementitious Decks & Underlayment",1
+28,"Building & Construction",Concrete,03600,Grouts,1
+29,"Building & Construction",Concrete,03700,"Mass Concrete",1
+30,"Building & Construction",Concrete,03900,"Concrete Restoration & Cleaning",1
+31,"Building & Construction",Masonry,04050,"Basic Materials & Methods",1
+32,"Building & Construction",Masonry,04200,"Masonry Units",1
+33,"Building & Construction",Masonry,04400,Stone,1
+34,"Building & Construction",Masonry,04500,Refractories,1
+35,"Building & Construction",Masonry,04600,"Corrosion-Resistant Masonry",1
+36,"Building & Construction",Masonry,04700,"Simulated Masonry",1
+37,"Building & Construction",Masonry,04800,"Masonry Assemblies",1
+38,"Building & Construction",Masonry,04900,"Masonry Restoration & Cleaning",1
+39,"Building & Construction",Metals,05050,"Basic Metal Materials & Methods",1
+40,"Building & Construction",Metals,05100,"Structural Metal Framing",1
+41,"Building & Construction",Metals,05200,"Metal Joists",1
+42,"Building & Construction",Metals,05300,"Metal Deck",1
+43,"Building & Construction",Metals,05400,"Cold-Formed Metal Framing",1
+44,"Building & Construction",Metals,05500,"Metal Fabrications",1
+45,"Building & Construction",Metals,05600,"Hydraulic Fabrications",1
+46,"Building & Construction",Metals,05650,"Railroad Track & Accessories",1
+47,"Building & Construction",Metals,05700,"Ornamental Metal",1
+48,"Building & Construction",Metals,05800,"Expansion Control",1
+49,"Building & Construction",Metals,05900,"Metal Restoration & Cleaning",1
+50,"Building & Construction","Wood & Plastics",06050,"Basic Materials & Methods",1
+51,"Building & Construction","Wood & Plastics",06100,"Rough Carpentry",1
+52,"Building & Construction","Wood & Plastics",06200,"Finish Carpentry",1
+53,"Building & Construction","Wood & Plastics",06400,"Architectural Woodwork",1
+54,"Building & Construction","Wood & Plastics",06500,"Structural Plastics",1
+55,"Building & Construction","Wood & Plastics",06600,"Plastic Fabrications",1
+56,"Building & Construction","Wood & Plastics",06900,"Wood & Plastic Restoration & Cleaning",1
+57,"Building & Construction","Thermal & Moisture Protection",07050,"Basic Thermal & Moisture Protection Materials",1
+58,"Building & Construction","Thermal & Moisture Protection",07100,"Dampproofing & Waterproofing",1
+59,"Building & Construction","Thermal & Moisture Protection",07200,"Thermal Protection",1
+60,"Building & Construction","Thermal & Moisture Protection",07300,"Shingles, Roof Tiles, & Roof Coverings",1
+61,"Building & Construction","Thermal & Moisture Protection",07400,"Roofing & Siding Panels",1
+62,"Building & Construction","Thermal & Moisture Protection",07500,"Membrane Roofing",1
+63,"Building & Construction","Thermal & Moisture Protection",07600,"Flashing & Sheet Metal",1
+64,"Building & Construction","Thermal & Moisture Protection",07700,"Roof Specialties & Accessories",1
+65,"Building & Construction","Thermal & Moisture Protection",07800,"Fire & Smoke Protection",1
+66,"Building & Construction","Thermal & Moisture Protection",07900,"Joint Sealers",1
+67,"Building & Construction","Doors & Windows",08050,"Basic Door & Window Materials & Methods",1
+68,"Building & Construction","Doors & Windows",08100,"Metal Doors & Frames",1
+69,"Building & Construction","Doors & Windows",08200,"Wood & Plastic Doors",1
+70,"Building & Construction","Doors & Windows",08300,"Specialty Doors",1
+71,"Building & Construction","Doors & Windows",08400,"Entrances & Storefronts",1
+72,"Building & Construction","Doors & Windows",08500,Windows,1
+73,"Building & Construction","Doors & Windows",08600,Skylights,1
+74,"Building & Construction","Doors & Windows",08700,Hardware,1
+75,"Building & Construction","Doors & Windows",08800,Glazing,1
+76,"Building & Construction","Doors & Windows",08900,"Glazed Curtain Wall",1
+77,"Building & Construction",Finishes,09050,"Basic Finish Materials & Methods",1
+78,"Building & Construction",Finishes,09100,"Metal Support Assemblies",1
+79,"Building & Construction",Finishes,09200,"Plaster Gypsum Board",1
+80,"Building & Construction",Finishes,09300,Tile,1
+81,"Building & Construction",Finishes,09400,Terrazzo,1
+82,"Building & Construction",Finishes,09500,Ceilings,1
+83,"Building & Construction",Finishes,09600,Flooring,1
+84,"Building & Construction",Finishes,09700,"Wall Finishes",1
+85,"Building & Construction",Finishes,09800,"Acoustical Treatment",1
+86,"Building & Construction",Finishes,09900,"Paints & Coatings",1
+87,"Building & Construction",Specialties,10100,"Visual Display Boards",1
+88,"Building & Construction",Specialties,10150,"Compartments & Cubicles",1
+89,"Building & Construction",Specialties,10200,"Louvers & Vents",1
+90,"Building & Construction",Specialties,10240,"Grilles & Screens",1
+91,"Building & Construction",Specialties,10250,"Service Walls",1
+92,"Building & Construction",Specialties,10260,"Wall & Corner Guards",1
+93,"Building & Construction",Specialties,10270,"Access Flooring",1
+94,"Building & Construction",Specialties,10290,"Pest Control",1
+95,"Building & Construction",Specialties,10300,"Fireplaces & Stoves",1
+96,"Building & Construction",Specialties,10340,"Manufactured Exterior Specialties",1
+97,"Building & Construction",Specialties,10350,Flagpoles,1
+98,"Building & Construction",Specialties,10400,"Identification Devices",1
+99,"Building & Construction",Specialties,10450,"Pedestrian Control Devices",1
+100,"Building & Construction",Specialties,10500,Lockers,1
+101,"Building & Construction",Specialties,10520,"Fire Protection Specialties",1
+102,"Building & Construction",Specialties,10530,"Protective Covers",1
+103,"Building & Construction",Specialties,10550,"Postal Specialties",1
+104,"Building & Construction",Specialties,10600,Partitions,1
+105,"Building & Construction",Specialties,10670,"Storage Shelving",1
+106,"Building & Construction",Specialties,10700,"Exterior Protection",1
+107,"Building & Construction",Specialties,10750,"Telephone Specialties",1
+108,"Building & Construction",Specialties,10800,"Toilet, Bath, & Laundry Accessories",1
+109,"Building & Construction",Specialties,10880,Scales,1
+110,"Building & Construction",Specialties,10900,"Wardrobe & Closet Specialties",1
+111,"Building & Construction",Equipment,11010,"Maintenance Equipmt",1
+112,"Building & Construction",Equipment,11020,"Security & Vault Equipmt",1
+113,"Building & Construction",Equipment,11030,"Teller & Service Equipmt",1
+114,"Building & Construction",Equipment,11040,"Ecclesiastical Equipmt",1
+115,"Building & Construction",Equipment,11050,"Library Equipmt",1
+116,"Building & Construction",Equipment,11060,"Theater & Stage Equipmt",1
+117,"Building & Construction",Equipment,11070,"Instrumental Equipmt",1
+118,"Building & Construction",Equipment,11080,"Registration Equipmt",1
+119,"Building & Construction",Equipment,11090,"Checkroom Equipmt",1
+120,"Building & Construction",Equipment,11100,"Mercantile Equipmt",1
+121,"Building & Construction",Equipment,11110,"Commercial Laundry & Dry Cleaning Equipmt",1
+122,"Building & Construction",Equipment,11120,"Vending Equipmt",1
+123,"Building & Construction",Equipment,11130,"Audio-Visual Equipmt",1
+124,"Building & Construction",Equipment,11140,"Vehicle Service Equipmt",1
+125,"Building & Construction",Equipment,11150,"Parking Control Equipmt",1
+126,"Building & Construction",Equipment,11160,"Loading Dock Equipmt",1
+127,"Building & Construction",Equipment,11170,"Solid Waste Handling Equipmt",1
+128,"Building & Construction",Equipment,11190,"Detention Equipmt",1
+129,"Building & Construction",Equipment,11200,"Water Supply & Treatment Equipmt",1
+130,"Building & Construction",Equipment,11280,"Hydraulic Gates & Valves",1
+131,"Building & Construction",Equipment,11300,"Fluid Waste Treatment & Disposal Equipmt",1
+132,"Building & Construction",Equipment,11400,"Food Service Equipmt",1
+133,"Building & Construction",Equipment,11450,"Residential Equipmt",1
+134,"Building & Construction",Equipment,11460,"Unit Kitchens",1
+135,"Building & Construction",Equipment,11470,"Darkroom Equipmt",1
+136,"Building & Construction",Equipment,11480,"Athletic, Recreational, & Therapeutic Equipmt",1
+137,"Building & Construction",Equipment,11500,"Industrial & Process Equipmt",1
+138,"Building & Construction",Equipment,11600,"Laboratory Equipmt",1
+139,"Building & Construction",Equipment,11650,"Planetarium Equipmt",1
+140,"Building & Construction",Equipment,11660,"Observatory Equipmt",1
+141,"Building & Construction",Equipment,11680,"Office Equipmt",1
+142,"Building & Construction",Equipment,11700,"Medical Equipmt",1
+143,"Building & Construction",Equipment,11780,"Mortuary Equipmt",1
+144,"Building & Construction",Equipment,11850,"Navigation Equipmt",1
+145,"Building & Construction",Equipment,11870,"Agricultural Equipmt",1
+146,"Building & Construction",Equipment,11900,"Exhibit Equipmt",1
+147,"Building & Construction",Furnishings,12050,Fabrics,1
+148,"Building & Construction",Furnishings,12100,Art,1
+149,"Building & Construction",Furnishings,12300,"Manufactured Casework",1
+150,"Building & Construction",Furnishings,12400,"Furnishings & Accessories",1
+151,"Building & Construction",Furnishings,12500,Furniture,1
+152,"Building & Construction",Furnishings,12600,"Multiple Seating",1
+153,"Building & Construction",Furnishings,12700,"Systems Furniture",1
+154,"Building & Construction",Furnishings,12800,"Interior Plants & Planters",1
+155,"Building & Construction",Furnishings,12900,"Furnishings Repair & Restoration",1
+156,"Building & Construction","Special Construction",13010,"Air-Supported Structures",1
+157,"Building & Construction","Special Construction",13020,"Building Modules",1
+158,"Building & Construction","Special Construction",13030,"Special Purpose Rooms",1
+159,"Building & Construction","Special Construction",13080,"Sound, Vibration, & Seismic Control",1
+160,"Building & Construction","Special Construction",13090,"Radiation Protection",1
+161,"Building & Construction","Special Construction",13100,"Lightning Protection",1
+162,"Building & Construction","Special Construction",13110,"Cathodic Protection",1
+163,"Building & Construction","Special Construction",13120,"Pre-Engineered Structures",1
+164,"Building & Construction","Special Construction",13150,"Swimming Pools",1
+165,"Building & Construction","Special Construction",13160,Aquariums,1
+166,"Building & Construction","Special Construction",13165,"Aquatic Park Facilities",1
+167,"Building & Construction","Special Construction",13170,"Tubs & Pools",1
+168,"Building & Construction","Special Construction",13175,"Ice Rinks",1
+169,"Building & Construction","Special Construction",13185,"Kennels & Animal Shelters",1
+170,"Building & Construction","Special Construction",13190,"Site-Constructed Incinerators",1
+171,"Building & Construction","Special Construction",13200,"Storage Tanks",1
+172,"Building & Construction","Special Construction",13220,"Filter Underdrains & Media",1
+173,"Building & Construction","Special Construction",13230,"Digester Covers & Appurtenances",1
+174,"Building & Construction","Special Construction",13240,"Oxygenation Systems",1
+175,"Building & Construction","Special Construction",13260,"Sludge Conditioning Systems",1
+176,"Building & Construction","Special Construction",13280,"Hazardous Material Remediation",1
+177,"Building & Construction","Special Construction",13400,"Measurement & Control Instrumentation",1
+178,"Building & Construction","Special Construction",13500,"Recording Instrumentation",1
+179,"Building & Construction","Special Construction",13550,"Transportation Control Instrumentation",1
+180,"Building & Construction","Special Construction",13600,"Solar & Wind Energy Equipmt",1
+181,"Building & Construction","Special Construction",13700,"Security Access & Surveillance",1
+182,"Building & Construction","Special Construction",13800,"Building Automation & Control",1
+183,"Building & Construction","Special Construction",13850,"Detection & Alarm",1
+184,"Building & Construction","Special Construction",13900,"Fire Suppression",1
+185,"Building & Construction","Conveying Systems",14100,Dumbwaiters,1
+186,"Building & Construction","Conveying Systems",14200,Elevators,1
+187,"Building & Construction","Conveying Systems",14300,"Escalators & Moving Walks",1
+188,"Building & Construction","Conveying Systems",14400,Lifts,1
+189,"Building & Construction","Conveying Systems",14500,"Material Handling",1
+190,"Building & Construction","Conveying Systems",14600,"Hoists & Cranes",1
+191,"Building & Construction","Conveying Systems",14700,Turntables,1
+192,"Building & Construction","Conveying Systems",14800,Scaffolding,1
+193,"Building & Construction","Conveying Systems",14900,Transportation,1
+194,"Building & Construction",Mechanical,15050,"Basic Mechanical Materials & Methods",1
+195,"Building & Construction",Mechanical,15100,"Building Services Piping",1
+196,"Building & Construction",Mechanical,15200,"Process Piping",1
+197,"Building & Construction",Mechanical,15300,"Fire Protection Piping",1
+198,"Building & Construction",Mechanical,15400,"Plumbing Fixtures & Equipmt",1
+199,"Building & Construction",Mechanical,15500,"Heat- Generation Equipmt",1
+200,"Building & Construction",Mechanical,15600,"Refrigeration Equipmt",1
+201,"Building & Construction",Mechanical,15700,"Heating, Ventilating, & Air Conditioning Equi",1
+202,"Building & Construction",Mechanical,15800,"Air Distribution",1
+203,"Building & Construction",Mechanical,15900,"HVAC Instrumentation & Controls",1
+204,"Building & Construction",Mechanical,15950,"Testing, Adjusting, & Balancing",1
+205,"Building & Construction",Electrical,16050,"Basic Electrical Materials & Methods",1
+206,"Building & Construction",Electrical,16100,"Wiring Methods",1
+207,"Building & Construction",Electrical,16200,"Electrical Power",1
+208,"Building & Construction",Electrical,16300,"Transmission & Distribution",1
+209,"Building & Construction",Electrical,16400,"Low-Voltage Distribution",1
+210,"Building & Construction",Electrical,16500,Lighting,1
+211,"Building & Construction",Electrical,16700,Communications,1
+212,"Building & Construction",Electrical,16800,"Sound & Video",1

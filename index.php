@@ -52,7 +52,7 @@ fclose($file);
 
 
 
-/// select from DB and output to a CSV
+/// print data
 
 $stmt = $db->query('SELECT * FROM msc_skills_traders');
 
@@ -69,14 +69,11 @@ print "Fetched data from the DB<br>";
     }
     .tab1 { width: 50px; }
     .tab2 { width: 200px; }
-    .tab3 { width: 200px; }
+    .tab3 { width: 300px; }
     .tab4 { width: 100px; }
     .tab5 { width: 500px; }
     .tab6 { width: 100px; }
     .head {
-        font-weight: bold;
-    }
-    .head > div {
         font-weight: bold;
     }
 
@@ -128,3 +125,17 @@ while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
 ?>
 
 </div>
+
+<?php
+
+// output to a csv
+$stmt = $db->query('SELECT * FROM msc_skills_traders');
+$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+$fp = fopen('output.csv', 'w');
+
+foreach ($rows as $row) {
+    fputcsv($fp, $row);
+}
+
+fclose($fp);
