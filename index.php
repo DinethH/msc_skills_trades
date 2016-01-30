@@ -28,20 +28,20 @@ while(!feof($file)) {
         if (($code % 1000) == 0) {
             $w2 = (explode(" - ",$description));
             $product_category = $w2[1];
-        } else {
-            $stmt = $db->prepare("INSERT INTO msc_skills_traders (industry, category, code, description, product_type) 
-                VALUES (:industry, :category, :code, :description, :product_type)");
-            $stmt->bindParam(':industry', $industry);
-            $stmt->bindParam(':category', $product_category);
-            $stmt->bindParam(':code', $code);
-            $stmt->bindParam(':description', $description);
-            $stmt->bindParam(':product_type', $product_type);
-            
-            if ($stmt->execute() == true) {
-                //print "$counter ";
-            }
-            $counter++;
+            $description = "General";
+        } 
+        $stmt = $db->prepare("INSERT INTO msc_skills_traders (industry, category, code, description, product_type) 
+            VALUES (:industry, :category, :code, :description, :product_type)");
+        $stmt->bindParam(':industry', $industry);
+        $stmt->bindParam(':category', $product_category);
+        $stmt->bindParam(':code', $code);
+        $stmt->bindParam(':description', $description);
+        $stmt->bindParam(':product_type', $product_type);
+        
+        if ($stmt->execute() == true) {
+            //print "$counter ";
         }
+        $counter++;
         
     }
 }
