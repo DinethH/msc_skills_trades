@@ -21,7 +21,7 @@ while(!feof($file)) {
     $industry = "Building & Construction";
     $code = trim($words[0]);
     $description = trim($words[1]);
-    $product_type = 1;
+    $product_type = 0;
     
     if ($code >= 1000) {
         
